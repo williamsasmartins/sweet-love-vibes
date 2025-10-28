@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy Policy – Sweets Love by Lu</title>
     <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-      :root { color-scheme: light dark; }
-      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; margin: 0; padding: 2rem; line-height: 1.6; }
+      :root {
+        color-scheme: light;
+        --foreground: 20 20% 23%;
+        --chocolate: 20 30% 35%;
+        --accent-pink: 345 70% 90%;
+        --accent-pink-light: 345 60% 96%;
+        --border: 345 30% 88%;
+      }
+      body {
+        margin: 0; padding: 2rem; line-height: 1.6;
+        font-family: 'Quicksand', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+        color: hsl(var(--foreground));
+        background: radial-gradient(60rem 60rem at -10% -20%, hsl(0 0% 100%) 0%, hsl(345 60% 96%) 60%, transparent 70%),
+                    radial-gradient(50rem 50rem at 110% -10%, hsl(0 0% 100%) 0%, hsl(345 70% 90%) 55%, transparent 70%),
+                    hsl(0 0% 100%);
+        background-attachment: fixed;
+      }
       .container { max-width: 800px; margin: 0 auto; }
-      h1 { font-size: 2rem; margin: 0 0 0.75rem; }
-      h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; }
+      h1 { font-size: 2rem; margin: 0 0 0.75rem; font-family: 'Playfair Display', serif; color: hsl(var(--chocolate)); font-weight: 700; }
+      h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem; font-family: 'Playfair Display', serif; color: hsl(var(--chocolate)); font-weight: 700; }
       p, li { font-size: 1rem; }
       code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #f3f3f3; padding: 0.1rem 0.3rem; border-radius: 4px; }
-      a { color: #b44; text-decoration: none; }
+      a { color: hsl(var(--chocolate)); text-decoration: none; }
       a:hover { text-decoration: underline; }
-      hr { border: 0; border-top: 1px solid #e2e2e2; margin: 1rem 0; }
+      hr { border: 0; border-top: 1px solid hsl(var(--border)); margin: 1rem 0; }
       ul { padding-left: 1.25rem; }
     </style>
   </head>
