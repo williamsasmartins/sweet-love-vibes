@@ -50,9 +50,9 @@ const Footer = () => {
               <Link to="/terms" className="text-foreground/70 hover:text-foreground">
                 {t('terms')}
               </Link>
-              <Link to="/privacy" className="text-foreground/70 hover:text-foreground">
+              <a href="/privacy.html" className="text-foreground/70 hover:text-foreground">
                 {t('privacy')}
-              </Link>
+              </a>
               <a
                 href="https://www.instagram.com/sweets_love.lu"
                 target="_blank"
