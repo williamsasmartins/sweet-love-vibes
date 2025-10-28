@@ -3,10 +3,25 @@ import { useI18n, Language } from '@/contexts/I18nContext';
 import logoRound from '@/assets/logo-sweetslove.png';
 import fallbackLogo from '@/assets/logo-round.png';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import usFlag from '@/assets/flags/us.svg';
+import esFlag from '@/assets/flags/es.svg';
+import brFlag from '@/assets/flags/br.svg';
 
 const Header = () => {
   const { language, setLanguage, t } = useI18n();
   const location = useLocation();
+
+  const flagByLang: Record<Language, string> = {
+    en: usFlag,
+    es: esFlag,
+    pt: brFlag,
+  };
+
+  const flagAlt: Record<Language, string> = {
+    en: 'United States flag',
+    es: 'Spain flag',
+    pt: 'Brazil flag',
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -66,15 +81,36 @@ const Header = () => {
             </a>
 
             <div className="flex items-center gap-2 px-2 py-1 rounded-full border border-border bg-card">
-              <span>🌐</span>
+              <img
+                src={flagByLang[language]}
+                alt={flagAlt[language]}
+                aria-label="language-flag"
+                title={language}
+                className="h-5 w-5 rounded-full object-cover"
+              />
               <Select value={language} onValueChange={(val) => setLanguage(val as Language)}>
                 <SelectTrigger className="w-20 border-0 bg-transparent h-auto p-0">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="en">EN</SelectItem>
-                  <SelectItem value="es">ES</SelectItem>
-                  <SelectItem value="pt">PT-BR</SelectItem>
+                  <SelectItem
+                    value="en"
+                    leading={<img src={usFlag} alt="United States flag" className="h-4 w-4 rounded-full object-cover" loading="lazy" />}
+                  >
+                    EN
+                  </SelectItem>
+                  <SelectItem
+                    value="es"
+                    leading={<img src={esFlag} alt="Spain flag" className="h-4 w-4 rounded-full object-cover" loading="lazy" />}
+                  >
+                    ES
+                  </SelectItem>
+                  <SelectItem
+                    value="pt"
+                    leading={<img src={brFlag} alt="Brazil flag" className="h-4 w-4 rounded-full object-cover" loading="lazy" />}
+                  >
+                    PT-BR
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
