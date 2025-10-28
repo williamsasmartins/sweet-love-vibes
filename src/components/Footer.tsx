@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/contexts/I18nContext';
-import logoRound from '@/assets/logo-round.png';
+import logoRound from '@/assets/logo-sweetslove.png';
+import fallbackLogo from '@/assets/logo-round.png';
 
 const Footer = () => {
   const { t } = useI18n();
@@ -12,7 +13,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logoRound} alt="Sweets Love" className="h-10 w-10 rounded-full" />
+              <img
+                src={logoRound}
+                alt="Sweets Love"
+                className="h-12 w-12 rounded-full bg-white p-1 border border-border shadow-sm object-contain"
+                loading="eager"
+                onError={(e) => {
+                  e.currentTarget.src = fallbackLogo;
+                }}
+              />
               <span className="font-bold heading-display text-lg">Sweets Love</span>
             </div>
             <p className="text-sm text-muted-foreground">
