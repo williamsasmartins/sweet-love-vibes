@@ -6,6 +6,7 @@ const dist = resolve(root, 'dist');
 const files = [
   ['public/privacy.html', 'privacy.html'],
   ['public/facebook.html', 'facebook.html'],
+  ['src/assets/logo-sweetslove.png', 'og-image.png'],
 ];
 
 mkdirSync(dist, { recursive: true });
