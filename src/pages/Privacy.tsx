@@ -18,6 +18,7 @@ const Privacy = () => {
         <meta property="og:description" content="How we collect, use, and protect your data. Contact via email or WhatsApp." />
         <meta property="og:image" content="https://www.sweetslove.ca/og-image.png" />
         <meta property="og:image:alt" content="Sweets Love by Lu — logo" />
+        <meta property="fb:app_id" content="805427292133819" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Privacy Policy — Sweets Love by Lu" />

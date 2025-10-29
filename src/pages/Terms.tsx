@@ -17,6 +17,7 @@ const Terms = () => {
         <meta property="og:description" content="Purchase terms, cancellations, deposits and pickup rules." />
         <meta property="og:image" content="https://www.sweetslove.ca/og-image.png" />
         <meta property="og:image:alt" content="Sweets Love by Lu — logo" />
+        <meta property="fb:app_id" content="805427292133819" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Terms of Service — Sweets Love by Lu" />

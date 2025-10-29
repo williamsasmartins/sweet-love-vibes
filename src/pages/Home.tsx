@@ -27,6 +27,7 @@ const Home = () => {
         <meta property="og:description" content="Custom cakes for every occasion, gourmet brigadeiros, cupcakes & more. Order via WhatsApp. Burnaby / Vancouver." />
         <meta property="og:image" content="https://www.sweetslove.ca/og-image.png" />
         <meta property="og:image:alt" content="Sweets Love by Lu — logo" />
+        <meta property="fb:app_id" content="805427292133819" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sweets Love by Lu — Custom Cakes & Signature Sweets" />
