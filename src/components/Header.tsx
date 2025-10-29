@@ -31,12 +31,12 @@ const Header = () => {
         <nav className="flex items-center justify-between flex-wrap gap-4">
           <Link to="/" className="flex items-center gap-3">
             <img
-              src={logoRound}
+                src="/og-image.png"
               alt="Sweets Love"
               className="h-14 w-14 rounded-full bg-white p-1 border border-border shadow-sm object-contain"
               loading="eager"
               onError={(e) => {
-                e.currentTarget.src = fallbackLogo;
+                  e.currentTarget.src = logoRound;
               }}
             />
             <h1 className="text-xl font-bold heading-display">Sweets Love</h1>

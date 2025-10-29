@@ -1,28 +1,50 @@
-import { mkdirSync, copyFileSync, existsSync } from 'node:fs';
-import { resolve } from 'node:path';
+import fs from 'fs';
+import path from 'path';
 
-const root = resolve(process.cwd());
-const dist = resolve(root, 'dist');
-const files = [
-  ['public/privacy.html', 'privacy.html'],
-  ['public/facebook.html', 'facebook.html'],
-  ['src/assets/logo-sweetslove.png', 'og-image.png'],
-];
+const root = process.cwd();
+const publicDir = path.join(root, 'sweet-love-vibes-main', 'public');
+const srcAssetsDir = path.join(root, 'sweet-love-vibes-main', 'src', 'assets');
+const distDir = path.join(root, 'sweet-love-vibes-main', 'dist');
 
-mkdirSync(dist, { recursive: true });
-
-for (const [fromRel, toRel] of files) {
-  const from = resolve(root, fromRel);
-  const to = resolve(dist, toRel);
-  if (!existsSync(from)) {
-    console.warn(`[copy-static-html] skip: ${fromRel} not found`);
-    continue;
-  }
-  try {
-    copyFileSync(from, to);
-    console.log(`[copy-static-html] copied: ${fromRel} -> ${toRel}`);
-  } catch (err) {
-    console.error(`[copy-static-html] failed: ${fromRel}`, err);
-    process.exitCode = 1;
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
   }
 }
+
+function copyFileSafe(from, to) {
+  ensureDir(path.dirname(to));
+  fs.copyFileSync(from, to);
+  console.log(`Copied: ${from} -> ${to}`);
+}
+
+function copyPublicHtml() {
+  if (!fs.existsSync(publicDir)) return;
+  const files = fs.readdirSync(publicDir).filter((f) => f.endsWith('.html'));
+  for (const f of files) {
+    const from = path.join(publicDir, f);
+    const to = path.join(distDir, f);
+    copyFileSafe(from, to);
+  }
+}
+
+function copyOgImage() {
+  const publicOg = path.join(publicDir, 'og-image.png');
+  const assetLogo = path.join(srcAssetsDir, 'logo-sweetslove.png');
+  const distOg = path.join(distDir, 'og-image.png');
+
+  if (fs.existsSync(publicOg)) {
+    copyFileSafe(publicOg, distOg);
+    return;
+  }
+  if (fs.existsSync(assetLogo)) {
+    copyFileSafe(assetLogo, distOg);
+    return;
+  }
+  console.warn('Warning: No OG image found (public/og-image.png or src/assets/logo-sweetslove.png)');
+}
+
+ensureDir(distDir);
+copyPublicHtml();
+copyOgImage();
+console.log('Static copy complete.');

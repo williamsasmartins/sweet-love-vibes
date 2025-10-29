@@ -14,12 +14,12 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src={logoRound}
+                src="/og-image.png"
                 alt="Sweets Love"
                 className="h-12 w-12 rounded-full bg-white p-1 border border-border shadow-sm object-contain"
                 loading="eager"
                 onError={(e) => {
-                  e.currentTarget.src = fallbackLogo;
+                  e.currentTarget.src = logoRound;
                 }}
               />
               <span className="font-bold heading-display text-lg">Sweets Love</span>
