@@ -17,6 +17,7 @@
   "rewrites": [
     { "source": "/privacy.html", "destination": "/privacy.html" },
     { "source": "/facebook.html", "destination": "/facebook.html" },
+    { "source": "/about.html", "destination": "/about.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
