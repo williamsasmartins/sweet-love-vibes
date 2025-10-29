@@ -1,7 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useI18n, Language } from '@/contexts/I18nContext';
-import logoRound from '@/assets/logo-sweetslove.png';
-import fallbackLogo from '@/assets/logo-round.png';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import usFlag from '@/assets/flags/us.svg';
 import esFlag from '@/assets/flags/es.svg';
@@ -29,17 +27,19 @@ const Header = () => {
     <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-3">
         <nav className="flex items-center justify-between flex-wrap gap-4">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="inline-flex items-center gap-3">
             <img
-                src="/og-image.png"
-              alt="Sweets Love"
-              className="h-14 w-14 rounded-full bg-white p-1 border border-border shadow-sm object-contain"
+              src="/wordmark-sweetslove-480.png"
+              srcSet="/wordmark-sweetslove-480.png 1x, /wordmark-sweetslove-960.png 2x"
+              alt="Sweets Love by Lu — wordmark"
+              className="h-8 w-auto"
               loading="eager"
+              decoding="sync"
               onError={(e) => {
-                  e.currentTarget.src = logoRound;
+                e.currentTarget.src = "/wordmark.png";
               }}
             />
-            <h1 className="text-xl font-bold heading-display">Sweets Love</h1>
+            <span className="sr-only">Sweets Love by Lu</span>
             <span className="hidden sm:inline-flex px-3 py-1 text-xs font-bold rounded-full bg-gradient-to-b from-white to-accent text-accent-foreground border border-border">
               Burnaby • Vancouver
             </span>

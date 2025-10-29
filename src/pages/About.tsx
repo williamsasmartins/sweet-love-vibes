@@ -1,6 +1,7 @@
 import { useI18n } from '@/contexts/I18nContext';
 import { Card } from '@/components/ui/card';
 import heroImage from '@/assets/hero-cake.jpg';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   const { t } = useI18n();
@@ -68,4 +69,3 @@ const About = () => {
 };
 
 export default About;
-import { Helmet } from 'react-helmet-async';

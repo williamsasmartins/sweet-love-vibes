@@ -1,4 +1,5 @@
 import { Card } from '@/components/ui/card';
+import { Helmet } from 'react-helmet-async';
 // Using native <hr> for broader compatibility and zero external deps
 
 const Privacy = () => {
@@ -120,4 +121,3 @@ const Privacy = () => {
 };
 
 export default Privacy;
-import { Helmet } from 'react-helmet-async';
