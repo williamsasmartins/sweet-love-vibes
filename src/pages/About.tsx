@@ -7,6 +7,25 @@ const About = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
+      <Helmet>
+        <title>About — Sweets Love by Lu</title>
+        <meta name="description" content="Hi, I’m Luciana. Custom cakes and signature sweets handcrafted with love and premium ingredients." />
+        <link rel="canonical" href="https://www.sweetslove.ca/about" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Sweets Love by Lu" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:url" content="https://www.sweetslove.ca/about" />
+        <meta property="og:title" content="About — Sweets Love by Lu" />
+        <meta property="og:description" content="Custom cakes and signature sweets handcrafted with love and premium ingredients." />
+        <meta property="og:image" content="https://www.sweetslove.ca/og-image.png" />
+        <meta property="og:image:alt" content="Sweets Love by Lu — logo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About — Sweets Love by Lu" />
+        <meta name="twitter:description" content="Custom cakes and signature sweets handcrafted with love." />
+        <meta name="twitter:image" content="https://www.sweetslove.ca/og-image.png" />
+      </Helmet>
       <h1 className="text-4xl font-bold heading-display mb-8">{t('aboutTitle')}</h1>
 
       <div className="grid md:grid-cols-[1.5fr_1fr] gap-6">
@@ -49,3 +68,4 @@ const About = () => {
 };
 
 export default About;
+import { Helmet } from 'react-helmet-async';

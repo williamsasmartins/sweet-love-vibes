@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useI18n } from '@/contexts/I18nContext';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -13,6 +14,25 @@ const Home = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Sweets Love by Lu — Custom Cakes & Signature Sweets</title>
+        <meta name="description" content="Custom cakes for every occasion, gourmet brigadeiros, cupcakes & more. Order via WhatsApp. Burnaby / Vancouver." />
+        <link rel="canonical" href="https://www.sweetslove.ca/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Sweets Love by Lu" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:url" content="https://www.sweetslove.ca/" />
+        <meta property="og:title" content="Sweets Love by Lu — Custom Cakes & Signature Sweets" />
+        <meta property="og:description" content="Custom cakes for every occasion, gourmet brigadeiros, cupcakes & more. Order via WhatsApp. Burnaby / Vancouver." />
+        <meta property="og:image" content="https://www.sweetslove.ca/og-image.png" />
+        <meta property="og:image:alt" content="Sweets Love by Lu — logo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sweets Love by Lu — Custom Cakes & Signature Sweets" />
+        <meta name="twitter:description" content="Custom cakes for every occasion, gourmet brigadeiros, cupcakes & more." />
+        <meta name="twitter:image" content="https://www.sweetslove.ca/og-image.png" />
+      </Helmet>
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center">

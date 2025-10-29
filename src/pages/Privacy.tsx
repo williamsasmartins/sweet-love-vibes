@@ -4,6 +4,25 @@ import { Card } from '@/components/ui/card';
 const Privacy = () => {
   return (
     <div className="container mx-auto px-4 py-12 max-w-3xl">
+      <Helmet>
+        <title>Privacy Policy — Sweets Love by Lu</title>
+        <meta name="description" content="How we collect, use, and protect your data. Contact via email or WhatsApp." />
+        <link rel="canonical" href="https://www.sweetslove.ca/privacy" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Sweets Love by Lu" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:url" content="https://www.sweetslove.ca/privacy" />
+        <meta property="og:title" content="Privacy Policy — Sweets Love by Lu" />
+        <meta property="og:description" content="How we collect, use, and protect your data. Contact via email or WhatsApp." />
+        <meta property="og:image" content="https://www.sweetslove.ca/og-image.png" />
+        <meta property="og:image:alt" content="Sweets Love by Lu — logo" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy — Sweets Love by Lu" />
+        <meta name="twitter:description" content="How we collect, use, and protect your data." />
+        <meta name="twitter:image" content="https://www.sweetslove.ca/og-image.png" />
+      </Helmet>
       <h1 className="text-4xl font-bold heading-display mb-4">Privacy Policy – Sweets Love by Lu</h1>
       <p className="text-sm text-muted-foreground mb-8">Last updated: October 28, 2025</p>
 
@@ -101,3 +120,4 @@ const Privacy = () => {
 };
 
 export default Privacy;
+import { Helmet } from 'react-helmet-async';
