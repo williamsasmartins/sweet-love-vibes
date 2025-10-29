@@ -90,14 +90,14 @@
         <ul>
           <li><strong>App ID</strong>: pass via querystring <code>?app_id=YOUR_APP_ID</code> or edit the <code>fb:app_id</code> meta tag.</li>
           <li><strong>Pixel (optional)</strong>: pass via <code>?pixel_id=YOUR_PIXEL_ID</code> to enable <em>PageView</em> tracking.</li>
-          <li><strong>Share URL</strong>: by default, we use <code>/privacy.html</code> (HTTP 200).</li>
+          <li><strong>Share URL</strong>: by default, we use <code>/privacy</code> (HTTP 200).</li>
         </ul>
       </section>
 
       <section class="card">
         <h2>Privacy & Security</h2>
         <p>No personal data is collected on this page. Security headers (CSP, HSTS, nosniff) are applied on Vercel.</p>
-        <p><a href="/privacy.html">Privacy Policy</a> • <a href="/terms">Terms</a></p>
+        <p><a href="/privacy">Privacy Policy</a> • <a href="/terms">Terms</a></p>
       </section>
     </div>
 
@@ -106,7 +106,7 @@
         const params = new URLSearchParams(location.search);
         const APP_ID = params.get('app_id') || document.querySelector('meta[property="fb:app_id"]').getAttribute('content') || 'YOUR_FACEBOOK_APP_ID';
         const PIXEL_ID = params.get('pixel_id');
-        const SHARE_URL = new URL('/privacy.html', location.origin).toString();
+        const SHARE_URL = new URL('/privacy', location.origin).toString();
 
         // SDK Facebook
         window.fbAsyncInit = function() {
