@@ -122,3 +122,10 @@
     color: hsl(var(--chocolate));
   }
 }
+
+/* REMOVE QUALQUER DECORAÇÃO DE CORAÇÃO DE TEMPLATE */
+[class*="lovable"], [class*="love-badge"], .badge-heart, .lovable-heart,
+[data-badge="heart"], .watermark-heart, .brand-heart {
+  display: none !important;
+  content: none !important;
+}

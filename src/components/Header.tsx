@@ -29,15 +29,11 @@ const Header = () => {
         <nav className="flex items-center justify-between flex-wrap gap-4">
           <Link to="/" className="inline-flex items-center gap-3">
             <img
-              src="/wordmark-sweetslove-480.png"
-              srcSet="/wordmark-sweetslove-480.png 1x, /wordmark-sweetslove-960.png 2x"
-              alt="Sweets Love by Lu — wordmark"
-              className="h-8 w-auto"
+              src="/logos/logo-sweetslove.png"
+              alt="Sweets Love by Lu — logo"
+              className="h-9 w-9 rounded-full"
               loading="eager"
               decoding="sync"
-              onError={(e) => {
-                e.currentTarget.src = "/wordmark.png";
-              }}
             />
             <span className="sr-only">Sweets Love by Lu</span>
             <span className="hidden sm:inline-flex px-3 py-1 text-xs font-bold rounded-full bg-gradient-to-b from-white to-accent text-accent-foreground border border-border">
