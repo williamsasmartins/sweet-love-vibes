@@ -10,6 +10,8 @@ import Footer from "@/components/Footer";
 import Cart from "@/components/Cart";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
+import Gallery from "./pages/Gallery";
+import SignatureSweets from "./pages/SignatureSweets";
 import About from "./pages/About";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
@@ -31,6 +33,8 @@ const App = () => (
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/menu" element={<Menu />} />
+                  <Route path="/gallery" element={<Gallery />} />
+                  <Route path="/signature-sweets" element={<SignatureSweets />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/privacy" element={<Privacy />} />

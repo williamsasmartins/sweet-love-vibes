@@ -88,6 +88,11 @@ const Home = () => {
 
       {/* Highlights Section */}
       <section className="container mx-auto px-4 py-12">
+        <div className="text-center mb-6">
+          <Link to="/gallery" className="text-primary hover:underline font-semibold">
+            {t('exploreGallery')} →
+          </Link>
+        </div>
         <h2 className="text-3xl md:text-4xl font-bold heading-display mb-8">Highlights</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="overflow-hidden shadow-[var(--shadow-soft)]">

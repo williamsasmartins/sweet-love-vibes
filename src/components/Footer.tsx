@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useI18n } from '@/contexts/I18nContext';
+import NewsletterForm from '@/components/NewsletterForm';
 
 const Footer = () => {
   const { t } = useI18n();

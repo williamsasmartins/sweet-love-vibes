@@ -13,6 +13,8 @@ const translations: Translations = {
   home: { en: 'Home', es: 'Inicio', pt: 'Início' },
   menu: { en: 'Menu', es: 'Menú', pt: 'Cardápio' },
   about: { en: 'About', es: 'Acerca', pt: 'Sobre' },
+  gallery: { en: 'Gallery', es: 'Galería', pt: 'Galeria' },
+  signatureSweets: { en: 'Signature Sweets', es: 'Dulces Exclusivos', pt: 'Doces Exclusivos' },
   terms: { en: 'Terms', es: 'Términos', pt: 'Termos' },
   privacy: { en: 'Privacy', es: 'Privacidad', pt: 'Privacidade' },
   
@@ -33,6 +35,22 @@ const translations: Translations = {
     pt: 'De celebrações íntimas a bolos de andares — escolha sabores, tamanhos e decoração. Peça pelo WhatsApp.'
   },
   exploreMenu: { en: 'Explore Menu', es: 'Ver Menú', pt: 'Ver Cardápio' },
+  exploreGallery: { en: 'Explore Gallery', es: 'Ver Galería', pt: 'Ver Galeria' },
+  
+  // Gallery
+  galleryTitle: { en: 'Cake Gallery', es: 'Galería de Tortas', pt: 'Galeria de Bolos' },
+  galleryDescription: { en: 'Browse our beautiful cake categories', es: 'Explora nuestras hermosas categorías de tortas', pt: 'Navegue por nossas lindas categorias de bolos' },
+  viewCategory: { en: 'View Category', es: 'Ver Categoría', pt: 'Ver Categoria' },
+  viewDetails: { en: 'View Details', es: 'Ver Detalles', pt: 'Ver Detalhes' },
+  backToGallery: { en: 'Back to Gallery', es: 'Volver a Galería', pt: 'Voltar à Galeria' },
+  backToCategory: { en: 'Back to Category', es: 'Volver a Categoría', pt: 'Voltar à Categoria' },
+  relatedProducts: { en: 'Related Products', es: 'Productos Relacionados', pt: 'Produtos Relacionados' },
+  
+  // Product Details
+  selectSize: { en: 'Select Size', es: 'Seleccionar Tamaño', pt: 'Selecionar Tamanho' },
+  quantity: { en: 'Quantity', es: 'Cantidad', pt: 'Quantidade' },
+  availableFlavors: { en: 'Available Flavors', es: 'Sabores Disponibles', pt: 'Sabores Disponíveis' },
+  minOrder: { en: 'Minimum Order', es: 'Pedido Mínimo', pt: 'Pedido Mínimo' },
   
   // Cart
   yourCart: { en: 'Your Cart', es: 'Tu Carrito', pt: 'Seu Carrinho' },
@@ -41,6 +59,26 @@ const translations: Translations = {
   checkoutWhatsApp: { en: 'Checkout via WhatsApp', es: 'Pagar por WhatsApp', pt: 'Finalizar via WhatsApp' },
   addToCart: { en: 'Add', es: 'Agregar', pt: 'Adicionar' },
   remove: { en: 'Remove', es: 'Eliminar', pt: 'Remover' },
+  
+  // Reviews
+  reviewsTitle: { en: 'What Our Clients Say', es: 'Lo Que Dicen Nuestros Clientes', pt: 'O Que Nossos Clientes Dizem' },
+  noReviews: { en: 'No reviews yet', es: 'Aún no hay reseñas', pt: 'Ainda não há avaliações' },
+  
+  // Newsletter
+  newsletterTitle: { en: '10% OFF YOUR NEXT ORDER', es: '10% DE DESCUENTO EN TU PRÓXIMO PEDIDO', pt: '10% DE DESCONTO NO SEU PRÓXIMO PEDIDO' },
+  newsletterSubtitle: { en: 'Subscribe to our mailing list for your exclusive discount and our latest updates!', es: '¡Suscríbete a nuestra lista para tu descuento exclusivo y nuestras últimas novedades!', pt: 'Inscreva-se na nossa lista para receber seu desconto exclusivo e nossas últimas novidades!' },
+  firstName: { en: 'First Name', es: 'Nombre', pt: 'Primeiro Nome' },
+  birthday: { en: 'Birthday (DD/MM)', es: 'Cumpleaños (DD/MM)', pt: 'Aniversário (DD/MM)' },
+  email: { en: 'Email', es: 'Correo Electrónico', pt: 'Email' },
+  subscribe: { en: 'Subscribe', es: 'Suscribirse', pt: 'Inscrever-se' },
+  subscribing: { en: 'Subscribing...', es: 'Suscribiendo...', pt: 'Inscrevendo...' },
+  subscribeSuccess: { en: 'Thank you! Check your email for your discount code.', es: '¡Gracias! Revisa tu correo para tu código de descuento.', pt: 'Obrigado! Verifique seu email para o código de desconto.' },
+  subscribeError: { en: 'Something went wrong. Please try again.', es: 'Algo salió mal. Por favor intenta de nuevo.', pt: 'Algo deu errado. Por favor, tente novamente.' },
+  
+  // Signature Sweets
+  signatureSweetsTitle: { en: 'Signature Sweets', es: 'Dulces Exclusivos', pt: 'Doces Exclusivos' },
+  signatureSweetsDescription: { en: 'Discover our handcrafted specialty sweets', es: 'Descubre nuestros dulces especiales hechos a mano', pt: 'Descubra nossos doces especiais feitos à mão' },
+  backToSignatureSweets: { en: 'Back to Signature Sweets', es: 'Volver a Dulces Exclusivos', pt: 'Voltar aos Doces Exclusivos' },
   
   // Menu
   searchPlaceholder: { en: 'Search flavors, tags…', es: 'Buscar sabores, etiquetas…', pt: 'Buscar sabores, tags…' },
